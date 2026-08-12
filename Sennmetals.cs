@@ -17,10 +17,18 @@ public class Sennmetals : QuintessentialMod
     {
         Logger.Log("Sennmetals: Holding a mirror to the Neumetals...");
 
+        // Logger.Log("Load Atoms");
         Atoms.LoadAtoms();
-
+        // Logger.Log("Import Neuvolics");
         ImportManager.ImportNeuvolics();
+
+        // Logger.Log("Load Parts");
+        Glyphs.LoadParts();
+        // Logger.Log("ExportAtoms");
         Exports.ExportAtoms();
+
+        // Logger.Log("GenerateLUTs");
+        GlyphLUT.GenerateLUTs();
 
         Logger.Log("Sennmetals: Neumetals crying at their reflection, transition done!");
     }
