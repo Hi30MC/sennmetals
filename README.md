@@ -13,7 +13,7 @@ Optional:
 
 # Atom List
 
-We describe the Sennmetals by their Neumetallic oppsite:
+We describe the Sennmetals by their Neumetallic opposite:
 
 | Neumetal | Sennmetal | Abbr. | Verbal Abbrev. | Based on  |            Properties            |
 |:--------:|:---------:|:-----:|:--------------:|:---------:|:--------------------------------:|
@@ -25,6 +25,6 @@ We describe the Sennmetals by their Neumetallic oppsite:
 
 # Glyph Behaviour
 
-Fixation: Swaps between Neumetal-Sennmetal pairs when double Zephiron is inserted. This does not work, however with Hestium and Typhor, where they get sent back to themselves. Furthermore, Frixon sends anti-clockwise (Eitros -> Serket -> Rofor...) while Gelaron sends clockwise (Serket -> Eitros -> Sordi...)
+Fixation: Swaps between Senneumetallic pairs when double Zephiron is inserted. This does not work, however with Hestium and Typhor, where they get sent back to themselves. Furthermore, Frixon sends anti-clockwise (Eitros -> Serket -> Rofor...) while Gelaron sends clockwise (Serket -> Eitros -> Sordi...)
 
 Translation: Translates between Sennmetals and Orimetals. Table can be found [here](https://github.com/Hi30MC/origami/blob/main/README.md).
