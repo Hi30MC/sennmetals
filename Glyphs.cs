@@ -1,6 +1,7 @@
 using Quintessential;
 using PartType = class_139;
 using System;
+using System.Text.RegularExpressions;
 
 namespace Sennmetals;
 
@@ -11,10 +12,15 @@ public static class Glyphs {
     public static readonly HexIndex FixationHole3Hex = new(1, 0);
     public static readonly HexIndex FixationZephironIrisHex = new(1, -2);
     public static readonly HexIndex FixationNeumetalIrisHex = new(-1, 2);
+    public static readonly string oldFixationString = ImportManager.NeuvolicsGlyphs.GetFixation().field_1530;
+    public static readonly string newFixationString = Regex.Replace(oldFixationString, "neu", "senneu") + " Inputting a pair of zephiron translates between most senneumetallic pairs.";
 #endregion
 
 #region LoadParts
     public static void LoadParts() {
+
+        ImportManager.NeuvolicsGlyphs.GetFixation().field_1530 = class_134.method_253(newFixationString, string.Empty);
+
         QApi.RunDuringCycle(static (sim, part, pss, first) => {
             SolutionEditorBase seb = sim.field_3818;
             PartType type = part.method_1159();

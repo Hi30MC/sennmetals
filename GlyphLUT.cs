@@ -41,38 +41,38 @@ public static class GlyphLUT {
         // Sennmetal -> Neumetal
         FixationLUT.Add(new Tuple<AtomType, AtomType, AtomType>(eitros, zephiron, zephiron), mitrum);
         FixationLUT.Add(new Tuple<AtomType, AtomType, AtomType>(sordi, zephiron, zephiron), iridium);
-        FixationLUT.Add(new Tuple<AtomType, AtomType, AtomType>(typhor, zephiron, zephiron), hestium);
+        FixationLUT.Add(new Tuple<AtomType, AtomType, AtomType>(typhor, zephiron, zephiron), typhor); // does not transmute to anything new!!
         FixationLUT.Add(new Tuple<AtomType, AtomType, AtomType>(rofor, zephiron, zephiron), azulum);
         FixationLUT.Add(new Tuple<AtomType, AtomType, AtomType>(serket, zephiron, zephiron), taceum);
 
         FixationLUT.Add(new Tuple<AtomType, AtomType, AtomType>(zephiron, eitros, zephiron), mitrum);
         FixationLUT.Add(new Tuple<AtomType, AtomType, AtomType>(zephiron, sordi, zephiron), iridium);
-        FixationLUT.Add(new Tuple<AtomType, AtomType, AtomType>(zephiron, typhor, zephiron), hestium);
+        FixationLUT.Add(new Tuple<AtomType, AtomType, AtomType>(zephiron, typhor, zephiron), typhor); // does not transmute to anything new!!
         FixationLUT.Add(new Tuple<AtomType, AtomType, AtomType>(zephiron, rofor, zephiron), azulum);
         FixationLUT.Add(new Tuple<AtomType, AtomType, AtomType>(zephiron, serket, zephiron), taceum);
 
         FixationLUT.Add(new Tuple<AtomType, AtomType, AtomType>(zephiron, zephiron, eitros), mitrum);
         FixationLUT.Add(new Tuple<AtomType, AtomType, AtomType>(zephiron, zephiron, sordi), iridium);
-        FixationLUT.Add(new Tuple<AtomType, AtomType, AtomType>(zephiron, zephiron, typhor), hestium);
+        FixationLUT.Add(new Tuple<AtomType, AtomType, AtomType>(zephiron, zephiron, typhor), typhor); // does not transmute to anything new!!
         FixationLUT.Add(new Tuple<AtomType, AtomType, AtomType>(zephiron, zephiron, rofor), azulum);
         FixationLUT.Add(new Tuple<AtomType, AtomType, AtomType>(zephiron, zephiron, serket), taceum);
 
         // Neumetal -> Sennmetal
         FixationLUT.Add(new Tuple<AtomType, AtomType, AtomType>(mitrum, zephiron, zephiron), eitros);
         FixationLUT.Add(new Tuple<AtomType, AtomType, AtomType>(iridium, zephiron, zephiron), sordi);
-        FixationLUT.Add(new Tuple<AtomType, AtomType, AtomType>(hestium, zephiron, zephiron), typhor);
+        FixationLUT.Add(new Tuple<AtomType, AtomType, AtomType>(hestium, zephiron, zephiron), hestium); //does not transmute to anything new!!
         FixationLUT.Add(new Tuple<AtomType, AtomType, AtomType>(azulum, zephiron, zephiron), rofor);
         FixationLUT.Add(new Tuple<AtomType, AtomType, AtomType>(taceum, zephiron, zephiron), serket);
 
         FixationLUT.Add(new Tuple<AtomType, AtomType, AtomType>(zephiron, mitrum, zephiron), eitros);
         FixationLUT.Add(new Tuple<AtomType, AtomType, AtomType>(zephiron, iridium, zephiron), sordi);
-        FixationLUT.Add(new Tuple<AtomType, AtomType, AtomType>(zephiron, hestium, zephiron), typhor);
+        FixationLUT.Add(new Tuple<AtomType, AtomType, AtomType>(zephiron, hestium, zephiron), hestium); //does not transmute to anything new!!
         FixationLUT.Add(new Tuple<AtomType, AtomType, AtomType>(zephiron, azulum, zephiron), rofor);
         FixationLUT.Add(new Tuple<AtomType, AtomType, AtomType>(zephiron, taceum, zephiron), serket);
 
         FixationLUT.Add(new Tuple<AtomType, AtomType, AtomType>(zephiron, zephiron, mitrum), eitros);
         FixationLUT.Add(new Tuple<AtomType, AtomType, AtomType>(zephiron, zephiron, iridium), sordi);
-        FixationLUT.Add(new Tuple<AtomType, AtomType, AtomType>(zephiron, zephiron, hestium), typhor);
+        FixationLUT.Add(new Tuple<AtomType, AtomType, AtomType>(zephiron, zephiron, hestium), hestium); //does not transmute to anything new!!
         FixationLUT.Add(new Tuple<AtomType, AtomType, AtomType>(zephiron, zephiron, azulum), rofor);
         FixationLUT.Add(new Tuple<AtomType, AtomType, AtomType>(zephiron, zephiron, taceum), serket);
 
