@@ -1,5 +1,5 @@
 Name: Sennmetals
-Version: 0.3.0
+Version: 0.3.1
 DLL: "sennmetals.dll"
 Dependencies:
   - Name: Quintessential
