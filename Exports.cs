@@ -11,10 +11,10 @@ public class Exports {
     [ModExportName("Sennmetals.Atoms")]
     public static class AtomExports
     {
-        public static AtomType GetTyphor() => null;
-        public static AtomType GetSordi() => null;
-        public static AtomType GetEitros() => null;
-        public static AtomType GetRofor() => null;
-        public static AtomType GetSerket() => null;
+        public static AtomType GetTyphor() => Atoms.typhor;
+        public static AtomType GetSordi() => Atoms.sordi;
+        public static AtomType GetEitros() => Atoms.eitros;
+        public static AtomType GetRofor() => Atoms.rofor;
+        public static AtomType GetSerket() => Atoms.serket;
     }
 }
