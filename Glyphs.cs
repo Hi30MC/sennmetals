@@ -46,33 +46,33 @@ public static class Glyphs {
                 {
                     return;
                 }
-                Logger.Log("Valid Inputs"  + " " +  hLeftAtom.field_2280.ToString()  + " " +   hRightAtom.field_2280.ToString()  + " " +   hCenterAtom.field_2280.ToString());
+                // Logger.Log("Valid Inputs"  + " " +  hLeftAtom.field_2280.ToString()  + " " +   hRightAtom.field_2280.ToString()  + " " +   hCenterAtom.field_2280.ToString());
                 if (!GlyphLUT.FixationLUT.TryGetValue(
                     new Tuple<AtomType, AtomType, AtomType>(hLeftAtom.field_2280, hRightAtom.field_2280, hCenterAtom.field_2280),
                     out AtomType output))
                 {
                     return;
                 }
-                Logger.Log("Valid Output");
+                // Logger.Log("Valid Output");
                 Logger.Log(output.ToString());
 
                 Brimstone.API.RemoveAtom(hLeftAtom);
                 Brimstone.API.RemoveAtom(hCenterAtom);
                 Brimstone.API.RemoveAtom(hRightAtom);
-                Logger.Log("deleted atoms");
+                // Logger.Log("deleted atoms");
 
                 Brimstone.API.DrawFallingAtom(seb, hLeftAtom);
                 Brimstone.API.DrawFallingAtom(seb, hCenterAtom);
                 Brimstone.API.DrawFallingAtom(seb, hRightAtom);
-                Logger.Log("drew falling atoms");
+                // Logger.Log("drew falling atoms");
 
                 Brimstone.API.AddSmallCollider(sim, part, FixationZephironIrisHex);
                 Brimstone.API.AddSmallCollider(sim, part, FixationNeumetalIrisHex);
-                Logger.Log("Add Small Collider falling atoms");
+                // Logger.Log("Add Small Collider falling atoms");
 
                 pss.field_2743 = true;
                 pss.field_2744 = new AtomType[2] { ImportManager.NeuvolicsAtoms.GetZephiron(), output };
-                Logger.Log("sent to render");
+                // Logger.Log("sent to render");
                 // Brimstone.API.PlaySound(sim, ImportManager.NeuvolicsAtoms.GetFixationSound());
             }
         });
