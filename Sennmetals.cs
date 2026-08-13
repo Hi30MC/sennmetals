@@ -22,10 +22,10 @@ public class Sennmetals : QuintessentialMod
         // Logger.Log("Import Neuvolics");
         ImportManager.ImportNeuvolics();
 
-        // Logger.Log("Load Parts");
-        Glyphs.LoadParts();
         // Logger.Log("ExportAtoms");
         Exports.ExportAtoms();
+        // Logger.Log("Load Parts");
+        Glyphs.LoadParts();
 
         // Logger.Log("GenerateLUTs");
         GlyphLUT.GenerateLUTs();

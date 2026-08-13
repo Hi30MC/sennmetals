@@ -15,7 +15,7 @@
 
 	<ItemGroup>
 		<Reference Include="Brimstone">
-			<HintPath>$(OpusPath)/Mods/Brimstone_2.2.0/Brimstone.dll</HintPath>
+			<HintPath>$(OpusPath)/Mods/Brimstone_2.2.1/Brimstone.dll</HintPath>
 		</Reference>
 		<Reference Include="Lightning">
 			<HintPath>$(OpusPath)/ModdedLightning.exe</HintPath>

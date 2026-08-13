@@ -5,6 +5,10 @@ namespace Sennmetals;
 public static class Atoms {
     public static AtomType typhor, sordi, eitros, rofor, serket;
 
+    public static bool IsSennmetal(AtomType type) {
+        return type == Atoms.typhor || type == Atoms.sordi || type == Atoms.eitros || type == Atoms.rofor || type == Atoms.serket;
+    }
+
     public static void LoadAtoms() {
         typhor = Brimstone.API.CreateNormalAtom(
             ID: 150,
