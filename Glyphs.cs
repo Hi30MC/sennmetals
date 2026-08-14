@@ -1,5 +1,6 @@
 using Quintessential;
 using PartType = class_139;
+using Texture = class_256;
 using System;
 using System.Text.RegularExpressions;
 using System.Collections.Generic;
@@ -16,6 +17,10 @@ public static class Glyphs
     public static readonly HexIndex FixationHole3Hex = new(1, 0);
     public static readonly HexIndex FixationZephironIrisHex = new(1, -2);
     public static readonly HexIndex FixationNeumetalIrisHex = new(-1, 2);
+
+    public static readonly Texture FixationZephironHalfActive = Brimstone.API.GetTexture("textures/atoms/Hi30MC/Sennmetals/zephiron_half_active");
+    public static readonly Texture FixationZephironInactive = Brimstone.API.GetTexture("textures/atoms/Hi30MC/Sennmetals/zephiron_inactive");
+
     public static readonly string oldFixationString = ImportManager.NeuvolicsGlyphs.GetFixation().field_1530;
     public static readonly string newFixationString = Regex.Replace(oldFixationString, "neu", "senneu")
                                                     + " Inputting a pair of zephiron translates between most senneumetallic pairs.";
@@ -161,7 +166,7 @@ public static class Glyphs
                         break;
                     case 0b0100:
                         // zephiron x1
-                        volicReadout = ImportManager.NeuvolicsFixationTextures.GetFixationHoleGelaronHalfActive();
+                        volicReadout = FixationZephironHalfActive;
                         break;
                     case 0b1001:
                         // frixon x2
@@ -173,7 +178,7 @@ public static class Glyphs
                         break;
                     case 0b1100:
                         //zephiron x2
-                        volicReadout = ImportManager.NeuvolicsFixationTextures.GetFixationHoleGelaronInactive();
+                        volicReadout = FixationZephironInactive;
                         break;
                     default:
                         // 0000: no volics are present.
