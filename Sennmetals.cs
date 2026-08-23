@@ -52,7 +52,7 @@ public class Sennmetals : QuintessentialMod
 
     private static void LoadMirrorRules()
     {
-        FTSIGCTU.MirrorTool.addRule(Glyphs.Fixation, FTSIGCTU.MirrorTool.mirrorSimplePart);
+        FTSIGCTU.MirrorTool.addRule(Glyphs.Fixation, FTSIGCTU.MirrorTool.mirrorVerticalPart0_0);
     }
 
     #endregion
