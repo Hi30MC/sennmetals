@@ -8,3 +8,6 @@ Dependencies:
     Version: 2.3.0
   - Name: Neuvolics
     Version: 1.3.3
+OptionalDependencies:
+  - Name: FTSIGCTU
+    Version: 0.7.4

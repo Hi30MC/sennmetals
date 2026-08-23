@@ -12,6 +12,7 @@ namespace Sennmetals;
 public static class Glyphs
 {
     #region GlyphMeta
+    public static readonly PartType Fixation = ImportManager.NeuvolicsGlyphs.GetFixation();
     public static readonly HexIndex FixationHole1Hex = new(-1, 0);
     public static readonly HexIndex FixationHole2Hex = new(0, 0);
     public static readonly HexIndex FixationHole3Hex = new(1, 0);
@@ -32,8 +33,6 @@ public static class Glyphs
     #region LoadParts
     public static void LoadParts()
     {
-        PartType Fixation = ImportManager.NeuvolicsGlyphs.GetFixation();
-
         Fixation.field_1530 = class_134.method_253(newFixationString, string.Empty);
 
         // Logger.Log("removing fixation clones");
