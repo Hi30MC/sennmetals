@@ -19,8 +19,10 @@ public static class Glyphs
     public static readonly HexIndex FixationZephironIrisHex = new(1, -2);
     public static readonly HexIndex FixationNeumetalIrisHex = new(-1, 2);
 
-    public static readonly Texture FixationZephironHalfActive = Brimstone.API.GetTexture("textures/atoms/Hi30MC/Sennmetals/zephiron_half_active");
-    public static readonly Texture FixationZephironInactive = Brimstone.API.GetTexture("textures/atoms/Hi30MC/Sennmetals/zephiron_inactive");
+    public static readonly Texture FixationHoleZephironHalfActive = Brimstone.API.GetTexture("textures/parts/Hi30MC/Sennmetals/zephiron_half_active");
+    public static readonly Texture FixationHoleZephironInactive = Brimstone.API.GetTexture("textures/parts/Hi30MC/Sennmetals/zephiron_inactive");
+    public static readonly Texture FixationHoleSenneumetalActive = Brimstone.API.GetTexture("textures/parts/Hi30MC/Sennmetals/senneumetal_active");
+    public static readonly Texture FixationHoleSennmetalInactive = Brimstone.API.GetTexture("textures/parts/Hi30MC/Sennmetals/sennmetal_inactive");
 
     public static readonly string oldFixationString = ImportManager.NeuvolicsGlyphs.GetFixation().field_1530;
     public static readonly string newFixationString = Regex.Replace(oldFixationString, "neu", "senneu")
@@ -94,8 +96,8 @@ public static class Glyphs
 
             // Logger.Log("draw fix");
         FixationDrawing:
-                              // NDZGF
-            int atomsPresent = 0b00000;
+                              // SNDZGF
+            int atomsPresent = 0b000000;
             HexIndex[] holes = new HexIndex[] { FixationHole1Hex, FixationHole2Hex, FixationHole3Hex };
             foreach (HexIndex h in holes)
             {
@@ -107,23 +109,23 @@ public static class Glyphs
                         AtomType aT = a.field_2275;
                         if (aT == ImportManager.NeuvolicsAtoms.GetFrixon())
                         {
-                            atomsPresent |= (atomsPresent & 0b00001) != 0 ? 0b01000 : 0b00001;
+                            atomsPresent |= (atomsPresent & 0b000001) != 0 ? 0b001000 : 0b000001;
                         }
                         else if (aT == ImportManager.NeuvolicsAtoms.GetGelaron())
                         {
-                            atomsPresent |= (atomsPresent & 0b00010) != 0 ? 0b0100 : 0b00010;
+                            atomsPresent |= (atomsPresent & 0b000010) != 0 ? 0b001000 : 0b000010;
                         }
                         else if (aT == ImportManager.NeuvolicsAtoms.GetZephiron())
                         {
-                            atomsPresent |= (atomsPresent & 0b00100) != 0 ? 0b01000 : 0b00100;
+                            atomsPresent |= (atomsPresent & 0b000100) != 0 ? 0b001000 : 0b000100;
                         }
                         else if (ImportManager.NeuvolicsAtoms.GetNeumetalIndex(aT) != -1)
                         {
-                            atomsPresent |= 0b10000;
+                            atomsPresent |= 0b010000;
                         }
                         else if (Atoms.IsSennmetal(aT))
                         {
-                            atomsPresent |= 0b10000;
+                            atomsPresent |= 0b100000;
                         }
                     }
                 }
@@ -148,11 +150,26 @@ public static class Glyphs
             // input rendering
             // Logger.Log("input rendering");
             {
-                class_256 neumetalReadout = (atomsPresent & 0b10000) != 0
-                                           ? ImportManager.NeuvolicsFixationTextures.GetFixationHoleNeumetalInactive()
-                                           : ImportManager.NeuvolicsFixationTextures.GetFixationHoleNeumetalActive();
+                class_256 neumetalReadout = FixationHoleSenneumetalActive;
+                // Logger.Log("Checking atomsPresent for Senneumetals: " + (atomsPresent & 0b110000));
+                switch (atomsPresent & 0b110000)
+                {      //0bSNDZGF
+                    case 0b010000:
+                        // neumetal x1
+                        neumetalReadout = ImportManager.NeuvolicsFixationTextures.GetFixationHoleNeumetalInactive();
+                        break;
+                    case 0b100000:
+                        // senneumetal x1
+                        neumetalReadout = FixationHoleSennmetalInactive;
+                        break;
+                    default:
+                        // 0b000000: none, so keep default.
+                        // 0b110000: impossible case.
+                        break;
+                }
+
                 class_256 volicReadout = ImportManager.NeuvolicsFixationTextures.GetFixationHoleVolicActive();
-                // Logger.Log("Checking atomsPresent: " + (atomsPresent & 15));
+                // Logger.Log("Checking atomsPresent for Volics: " + (atomsPresent & 0b001111));
                 switch (atomsPresent & 0b1111)
                 {     // 0bDZGF
                     case 0b0001:
@@ -165,7 +182,7 @@ public static class Glyphs
                         break;
                     case 0b0100:
                         // zephiron x1
-                        volicReadout = FixationZephironHalfActive;
+                        volicReadout = FixationHoleZephironHalfActive;
                         break;
                     case 0b1001:
                         // frixon x2
@@ -177,7 +194,7 @@ public static class Glyphs
                         break;
                     case 0b1100:
                         //zephiron x2
-                        volicReadout = FixationZephironInactive;
+                        volicReadout = FixationHoleZephironInactive;
                         break;
                     default:
                         // 0000: no volics are present.
