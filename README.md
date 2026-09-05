@@ -7,9 +7,10 @@ The Sennmetals also tie into the Orimetals similar to the Neumetals, and this be
 
 - Quintessential, latest
 - Brimstone, latest
+- Neuvolics, latest
 
 Optional:
-- Neuvolics, latest
+- FTSIGCTU, latest
 
 # Atom List
 
