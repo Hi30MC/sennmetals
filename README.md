@@ -1,4 +1,8 @@
 # sennmetals
+
+> [!CAUTION]
+> This is the PV version of Sennmetals. If you wish to view the CE port, see [here](https://github.com/Hi30MC/sennmetals-ce).
+
 The **Sennmetals** are the sister-family to the Neuvolics, serving as the role of anti-Neumetals. They only transmute through fixation, and behave with opposite chirality when compared to the Neumetals. Using fixation with two zephiron will switch between the two families for all pairs except Hestium and Typhor, as these transmute to themselves. There are no anti-Volics as this would have the same effect as the current Volics but swapped, hence the implementation here.
 
 The Sennmetals also tie into the Orimetals similar to the Neumetals, and this behaviour is documented in the Orimetals' page [here](https://github.com/Hi30MC/origami/blob/main/README.md).
